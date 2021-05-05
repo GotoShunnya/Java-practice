@@ -31,6 +31,8 @@ public class Ready02 { //クラスブロック開始
 
 		Character Character1 = 'a'; //「文字型」
 		System.out.println(Character1);
+		
+		//----------------------------------------------------------------------------------
 
 		int[] array1 = new int[5]; //「配列」
 		array1[0] = 1;
@@ -44,16 +46,53 @@ public class Ready02 { //クラスブロック開始
 		int[] array3 = new int[] { 55, 1, 2, 3, 4 }; //上を省略した形
 		System.out.println(array3[0]);
 
-		int val = 2 + 5; //出力結果一緒に出ちゃう（汗）
+		int val = 2 + 5; //-----------------------------------------------------------------
 		val++; //インクリメント（処理の後に数値を１増加させる）。1減らすのはデクリメント
 		val *= 5;// valに5掛ける
 		System.out.println(val);
-		
+
 		boolean bool = (val == 50); //valは50と等しいという比較
 		System.out.println(bool);
-		
+
 		bool = (val < 50) && (val % 10 == 0); //valは50より小さく、且つ10で割った数が0と等しい
 		System.out.println(bool);
+		
+		//-----------------------------------------------------------------------------------
 
+		int distance = 4;
+
+		if (distance <= 5) { //変数の値が5以下の時
+			System.out.println("とても近いです");
+		}
+
+		else if (distance <= 10) { //変数の値が5以上10以下の時
+            System.out.println("近いです");
+		}
+		
+		else if (distance <= 15) { //変数の値が10以上15以下の時
+			System.out.println("遠いです");
+		}
+		
+		else { //値が15以上の時
+			System.out.println("とても遠いです");
+		}
+	
+	//---------------------------------------------------------------------------------------
+		String signal = "blue"; //文字列でblueの時
+				switch (signal) { //変数の値を条件にして分岐をする制御文(switch)
+				
+				case "red": //変数とcaseの値が一致するとき処理を実行
+					System.out.println("赤信号です");
+			    
+				case "yellow":
+					System.out.println("黄信号です");
+					
+				case "blue":
+					System.out.println("青信号です");
+					break; //break文でそれ以降のcaseは評価せず、switch文を終了する。
+					
+				default:// すべてのcaseと一致しない場合、default内の処理が実行される。（必須ではない）
+					System.out.println("信号の色ではありません");
+				}
 	}
 }
