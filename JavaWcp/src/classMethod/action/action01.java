@@ -9,5 +9,6 @@ import classMethod.MyFanction.MyFanction02;
 
 	        MyFanction02 sato = new MyFanction02("佐藤", 25); //MyFanction02クラスのインスタンスを生成
 	        System.out.println("名前は" + sato.name + "で、年齢は" + sato.age + "です。");
+	        
 	    }
 	}
