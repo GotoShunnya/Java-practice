@@ -12,7 +12,6 @@ public class MyFanction02 {
 	public MyFanction02(String name, int age) {
 		this.name = name;
 		this.age = age;
-		
 	
 	}
 }
