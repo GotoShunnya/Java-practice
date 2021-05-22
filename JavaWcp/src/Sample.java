@@ -11,6 +11,6 @@ public class Sample {
     	System.out.print("あなたの名前は");
     	String name = scanner.next();
     	System.out.println("私の名前は" + name + "です");
-    	scanner.close();
+    	scanner.close();// Scannerクラスのインスタンスをクローズ/
     }
   }
