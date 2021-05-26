@@ -1,5 +1,7 @@
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
@@ -48,6 +50,21 @@ public class Sample {
 		case 6:
 			System.out.println("負けたわ。最強");
 			break;
+		}
+			ArrayList<String> stateList = new ArrayList<String>();
+			stateList.add("TX");
+			stateList.add("WA");
+			stateList.add("CA");
+
+			for(int i=0;i<stateList.size();i++){
+				System.out.println(stateList.get(i));
+			}
+
+			Collections.sort(stateList);
+			System.out.println("--- Sorted ---");
+
+			for(int i=0;i<stateList.size();i++){
+				System.out.println(stateList.get(i));
 		}
 	}
 }
