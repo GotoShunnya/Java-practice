@@ -1,4 +1,4 @@
-
+import java.util.Random;
 public class FizzBuzz {
 	public static void main(String[] args) {
 	  int i = 0;
@@ -9,14 +9,16 @@ public class FizzBuzz {
 	  String strbuzz = "Buzz";
 	  
 	  for (i = 1; i <= counter; i++) {
-		  if (i % (numfizz * numbuzz) == 0) {
+		  Random rand = new Random();
+		  int randnum = rand.nextInt(100) + 1;//変数randnumも100回繰り返す。/
+		  if (randnum % (numfizz * numbuzz) == 0) {
 			  System.out.println(strfizz + strbuzz);
-		  }  else if (i % numfizz == 0) {
+		  }  else if (randnum % numfizz == 0) {
 			  System.out.println(strfizz);
-		  }  else if (i % numbuzz == 0) {
+		  }  else if (randnum % numbuzz == 0) {
 			  System.out.println(strbuzz);
 		  }  else {
-			  System.out.println(i);
+			  System.out.println(randnum);
 		  }
 	  }
   }
