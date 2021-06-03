@@ -45,6 +45,14 @@ public class Ready02 { //クラスブロック開始
 
 		int[] array3 = new int[] { 55, 1, 2, 3, 4 }; //上を省略した形
 		System.out.println(array3[0]);
+		
+		String[] cboys = new String[] {"後藤", "関", "久我谷", "市川"};
+		System.out.println("私の名前は" + cboys[0]);
+		for (int m = 0; m < cboys.length; m++) {
+			System.out.println("cboysメンバー" + cboys[m]);
+			System.out.println("");
+		}
+		
 
 		int val = 2 + 5; //-----------------------------------------------------------------
 		val++; //インクリメント（処理の後に数値を１増加させる）。1減らすのはデクリメント
