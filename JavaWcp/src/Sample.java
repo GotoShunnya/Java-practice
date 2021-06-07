@@ -51,20 +51,34 @@ public class Sample {
 			System.out.println("負けたわ。最強");
 			break;
 		}
-			ArrayList<String> stateList = new ArrayList<String>();
-			stateList.add("TX");
-			stateList.add("WA");
-			stateList.add("CA");
+		
+		ArrayList<String> stateList = new ArrayList<String>();
+		stateList.add("TX");//addで項目を追加/
+		stateList.add("WA");
+		stateList.add("CA");
 
-			for(int i=0;i<stateList.size();i++){
-				System.out.println(stateList.get(i));
+		for (int i = 0; i < stateList.size(); i++) {
+			System.out.println(stateList.get(i));//get関数で引数に取り出したいインデックス番号を指定（今回は配列の要素の文取り出す）
+		}
+
+		Collections.sort(stateList);//デフォルトのABC順/
+		System.out.println("--- Sorted ---");
+
+		for (int i = 0; i < stateList.size(); i++) {
+			System.out.println(stateList.get(i));
+		}
+		
+		for(int i = 10; i >= 1; i--) {//for分のネスト練習/
+			for(int j = 1; j <= 10; j++) {
+				if( i % 2 == 0 ) {
+				}
+				else if(j % 2 == 0) {
+				}
+				else {//奇数だけ表示/
+					System.out.println("(" + i + "," + j + ")");
+				}
 			}
-
-			Collections.sort(stateList);
-			System.out.println("--- Sorted ---");
-
-			for(int i=0;i<stateList.size();i++){
-				System.out.println(stateList.get(i));
+			System.out.println("");
 		}
 	}
 }
