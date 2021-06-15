@@ -15,8 +15,8 @@ public class Divisor {
 
 	static int isDivisor(int num) {//メソッド定義/
 		int count = 0;
-		for(int i = 1; i <= num; i++) {
-			if(num % i == 0) {//記入した整数を1から割っていき、余りが0の時(約数)/
+		for (int i = 1; i <= num; i++) {
+			if (num % i == 0) {//記入した整数を1から割っていき、余りが0の時(約数)/
 				System.out.print(i + ", ");//約数の表示/
 				count++;//約数の数をカウント/
 			}
@@ -24,11 +24,11 @@ public class Divisor {
 		System.out.println();
 		return count;
 	}
-	
+
 	static int all(int num) {//メソッド定義/
 		int sum = 0;
 		for (int i = 1; i <= num; i++) {
-			if(num % i == 0) {
+			if (num % i == 0) {
 				sum += i;//約数をsumに入れて加算/
 			}
 		}
