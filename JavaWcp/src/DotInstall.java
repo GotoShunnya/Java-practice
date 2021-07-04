@@ -159,5 +159,14 @@ public class DotInstall {
 		System.out.println(t);
 		//結果が基本データ型と同じ!
 		//基本的に文字列の変更は不可になっていて、違う文字列を割り当てると別の領域に新しくデータを確保する仕組みになっているから。
+		
+		//--Lesson16 メソッド--
+//		sayHi("Tom"); メソッドの呼び出し。
+//		sayHi("Bob");
+		String Hi = sayHi("Steve");// メソッドを呼び出して、引数にメソッドの仮引数に入れるSteveを指定。その後変数に格納。
+		System.out.println(Hi);
 	}
+			public static String sayHi(String name) {//sayHiメソッド　returnで処理結果を返しているので、voidではなく戻り値の型（String）
+				return "Hi!" + name;
+			}
 }
