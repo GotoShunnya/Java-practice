@@ -165,8 +165,66 @@ public class DotInstall {
 //		sayHi("Bob");
 		String Hi = sayHi("Steve");// メソッドを呼び出して、引数にメソッドの仮引数に入れるSteveを指定。その後変数に格納。
 		System.out.println(Hi);
+		
+		//--Lesson17 メソッドのオーバーロード--
+		//引数の個数や型が違えば、同じ名前のメソッドを作成できる。（オーバーロード）
+		sayHi();//上に同名のメソッドが存在するが、引数が違うので区別でき、呼び出しができる。
+		
+		//--Lesson18--
+		User tom;//宣言
+		//tom = new User("Tom");//クラスは参照型なので配列と同じようにnewする必要がある。インスタンス化するという。
+		tom = new User();//コンストラクタもオーバーロード可能
+		System.out.println(tom.name);
+		tom.sayHi();
+		
+		AdminUser Bob;//宣言
+		Bob = new AdminUser("Bob");
+		System.out.println(Bob.name);
+		Bob.sayHi();
+		Bob.sayHello();
 	}
 			public static String sayHi(String name) {//sayHiメソッド　returnで処理結果を返しているので、voidではなく戻り値の型（String）
 				return "Hi!" + name;
 			}
+			
+			public static void sayHi() {//引数なしのsyaHiメソッド。戻り値がないのでvoid。
+				System.out.println("Hi! nobody");
+			}
+}
+
+//--Lesson18 クラスを使ってみよう--
+class User{//クラス名は必ず大文字。AdminUserクラスの親クラス（スーパークラス。）
+	String name;//クラスに属する変数を”フィールド”という。
+	
+	//--Lesson19 コンストラクタを使う。--
+	User(String name){//コンストラクタを作るにはクラス名のメソッドを作ればok
+		this.name = name;
+	}
+	
+	User(){//コンストラクタを作るにはクラス名のメソッドを作ればok
+		this.name = "Me";
+	}
+	
+	public void sayHi() {
+		System.out.println("Hi! " + this.name);//thisはこのクラスのコンストラクタという意味。
+	}
+}
+
+//--Lesson20 クラスの継承。--
+class AdminUser extends User {//extendsを用いて、Userクラスを継承（クラスのフィールドやメソッドを使えるようになる。）してAdminUserクラスを作成。子クラス。
+	
+	AdminUser(String name){
+		super(name);//親クラスのコンストラクタを呼び出す。superを使う。
+	}
+	
+	public void sayHello() {
+		System.out.println("Hello! " + this.name);//thisはこのクラスのコンストラクタという意味。
+	}
+	
+	//親クラスのメソッドを上書きできる（オーバーライド。）
+	@Override//アノテーション。オーバーライドしていることを明示できるので、メソッド名や引数に間違いがあるとエラーにしてくれる。
+	public void sayHi() {//override
+		System.out.println("[admin] Hi! " + this.name);
+	}
+	
 }
