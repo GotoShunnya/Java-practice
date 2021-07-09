@@ -2,8 +2,8 @@ package com.dotinstall.myapp.model;//パッケージを使う場合は、フォ�
 
 public class AdminUser extends User {
 
-  public AdminUser(String name) {
-    super(name);
+  public AdminUser(String name, int score) {//コンストラクタ
+    super(name, score);
   }
 
   public void sayHello() {
@@ -13,5 +13,15 @@ public class AdminUser extends User {
   @Override
   public void sayHi() {
     System.out.println("[admin] hi! " + this.name);
+  }
+    
+  public int getAdminScore() {//geter
+  	return this.score;
+  }
+    
+  public void setAdminScore(int score) {//setter
+  	if(score > 0) {//マイナスの値を処理しないようにする。
+  		this.score = score;
+  	}
   }
 }
