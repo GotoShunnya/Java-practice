@@ -1,9 +1,9 @@
-package classMethod.calculator;//完全数判別プログラム/
+package classMethod.calculator.model;
 
 import java.util.Scanner;
 
 public class PerfectNumber {
-	public static void main(String[] args) {
+	public void perfectNumber() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("完全数か判断したい整数を記入してください:");
 		int num = scanner.nextInt();

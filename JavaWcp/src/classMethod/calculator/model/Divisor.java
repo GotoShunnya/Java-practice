@@ -1,9 +1,9 @@
-package classMethod.calculator;//約数検出プログラム/
+package classMethod.calculator.model;
 
 import java.util.Scanner;
 
 public class Divisor {
-	public static void main(String[] args) {
+	public void divisor() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("約数を調べたい整数を記入: ");
 		int num = scanner.nextInt();
