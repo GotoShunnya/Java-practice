@@ -13,24 +13,41 @@ public class SPI {
 
 		System.out.println("選んでください　約数、　完全数");
 		String calculator = scanner.next();
-		
-			
-		    switch (calculator) {
-		
-		    case "約数":
-			    divisor.divisor();
-			    break;
-			
-		    case "完全数":
-		    	perfectNumber.perfectNumber();
-			    break;
-			
-		    default:
-			    System.out.print("入力したワードは見つかりませんでした。もう一度選んでください。");
-			   
-		    }
-		scanner.close();
-		
+		boolean oneMore;
+
+		if (calculator.equals("約数")) {
+			oneMore = false;
+		} else if (calculator.equals("完全数")) {
+			oneMore = false;
+		} else {
+			oneMore = true;
+		}
+
+		do {
+
+			switch (calculator) {
+
+			case "約数":
+				divisor.divisor();
+				break;
+
+			case "完全数":
+				perfectNumber.perfectNumber();
+				break;
+			}
+
+			if (calculator.equals("約数")) {
+				scanner.close();
+				oneMore = false;
+			} else if (calculator.equals("完全数")) {
+				scanner.close();
+				oneMore = false;
+			} else {
+				System.out.print("入力したワードは見つかりませんでした。もう一度選んでください。");
+				calculator = scanner.next();
+			}
+		} while (oneMore);
+
 	}
 
 }
