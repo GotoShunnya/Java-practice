@@ -10,7 +10,7 @@ public class Average {
 		int i = 1;
 		int plus = 0;
 		int sum = 0;
-		int ave = 0;
+		double ave = 0;
 		boolean end = true;
 		
 		Scanner scanner = new Scanner(System.in);
@@ -21,12 +21,12 @@ public class Average {
 			int[] number = new int[i];
 			
 			if (count >= 1) {
-				System.out.println("整数を記入: ");
+				System.out.println("整数を記入(終了は\" 00 \") ");
 				num = scanner.nextInt();
 			}
 			
 			if (num == 00) {
-				ave = sum / count;
+				ave = (double)sum / count;
 				end = false;
 				scanner.close();
 				
@@ -38,7 +38,8 @@ public class Average {
 			    count++;
 			}
 		}while(end);
-		System.out.println("合計は　" + sum);
-		System.out.println("平均は " + ave);
+		System.out.println("合計は " + sum);
+		System.out.println("平均は " + (Math.floor(ave * 10) / 10));//Math.floorは小数点を切り捨てる。
+		//先に値を10倍し、小数点を切り捨てる。その後、10で割ることで小数点第一位で切り捨てることができる。
 	}
 }

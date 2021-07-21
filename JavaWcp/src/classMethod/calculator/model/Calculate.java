@@ -3,8 +3,9 @@ package classMethod.calculator.model;
 import java.util.Scanner;
 
 public class Calculate {
-	int num = 0;
+	double num = 0;
 	int counter = 0;
+	int division = 0;
 
 	public void calculate() {
 		Scanner scanner = new Scanner(System.in);
@@ -68,10 +69,12 @@ public class Calculate {
 			case "/":
 				divisionNumber(number);
 				count++;
+				division++;
 				break;
 
 			case "/=":
 				divisionNumber(number);
+				division++;
 				whatSymbol = false;
 				scanner.close();
 				scan.close();
@@ -86,28 +89,28 @@ public class Calculate {
 				System.out.println("演算記号以外記入しないでください。整数・記号を打ち直してください。");
 			}
 		} while (whatSymbol);
-
-		System.out.println("計算結果は　" + this.num);
-
+		
+			System.out.println("計算結果は　" + Math.floor(this.num * 1000) / 1000);
+		
 	}
 
-	public int addNumber(int number) {
+	public double addNumber(int number) {
 			this.num += number;
 			return this.num;
 	}
 
-	public int minusNumber(int number) {
+	public double minusNumber(int number) {
 			this.num -= number;
 			return this.num;
 	}
 
-	public int timsNumber(int number) {
+	public double timsNumber(int number) {
 			this.num *= number;
 			return this.num;
 	}
 
-	public int divisionNumber(int number) {
-			this.num /= number;
+	public double divisionNumber(int number) {
+		this.num /= number;
 			return this.num;
 	}
 }
