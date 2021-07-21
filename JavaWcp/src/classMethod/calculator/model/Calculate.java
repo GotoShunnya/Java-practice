@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Calculate {
 	double num = 0;
 	int counter = 0;
-	int division = 0;
 
 	public void calculate() {
 		Scanner scanner = new Scanner(System.in);
@@ -69,12 +68,10 @@ public class Calculate {
 			case "/":
 				divisionNumber(number);
 				count++;
-				division++;
 				break;
 
 			case "/=":
 				divisionNumber(number);
-				division++;
 				whatSymbol = false;
 				scanner.close();
 				scan.close();
