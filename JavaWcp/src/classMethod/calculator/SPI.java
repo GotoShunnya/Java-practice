@@ -9,18 +9,18 @@ import classMethod.calculator.model.PerfectNumber;
 
 public class SPI {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		
 		Divisor divisor = new Divisor();
 		PerfectNumber perfectNumber = new PerfectNumber();
 		Calculate calculate = new Calculate();
 		Average average = new Average();
-
+		
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("選んでください　約数、　完全数、　四則演算　平均");
 		String calculator = scanner.next();
 		boolean oneMore = true;
 
 		do {
-
 			switch (calculator) {
 
 			case "約数":
