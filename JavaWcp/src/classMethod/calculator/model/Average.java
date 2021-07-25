@@ -26,6 +26,7 @@ public class Average {
 			}
 			
 			if (num == 00) {
+				number = null;//配列にnullを入れることで、ガベージコレクションの対象になる。使い終わった配列はnullを入れてガベージコレクションの対象にすることでメモリーの後片付けを行える。
 				ave = (double)sum / count;
 				end = false;
 				scanner.close();
