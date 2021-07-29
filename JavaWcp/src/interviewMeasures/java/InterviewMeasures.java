@@ -12,7 +12,7 @@ public class InterviewMeasures {
 		Scanner scanner = new Scanner(System.in);
 		ArrayList<Integer> list = new ArrayList<Integer>();
 
-		for (int i = 1; i <= 5; i++) {
+		for (int i = 1; i <= 11; i++) {
 			list.add(i);//listにaddメソッドを使って数字を入れてゆく。
 		}
 
@@ -43,6 +43,36 @@ public class InterviewMeasures {
 
 			case 5:
 				System.out.println("退職理由をお願い致します。 完了後は　以上　と記入");
+				completion = scanner.next();
+				break;
+				
+			case 6:
+				System.out.println("今後のキャリアプランをお教えください。 完了後は　以上　と記入");
+				completion = scanner.next();
+				break;
+				
+			case 7:
+				System.out.println("事業内容は理解しているか？また興味はあるか。 完了後は　以上　と記入");
+				completion = scanner.next();
+				break;
+				
+			case 8:
+				System.out.println("Salesforceを知っているか 完了後は　以上　と記入");
+				completion = scanner.next();
+				break;
+				
+			case 9:
+				System.out.println("わからないことに直面した際、どのように乗り越えてきたか 完了後は　以上　と記入");
+				completion = scanner.next();
+				break;
+				
+			case 10:
+				System.out.println("スクール卒業後はどのように学習しているか。 完了後は　以上　と記入");
+				completion = scanner.next();
+				break;
+				
+			case 11:
+				System.out.println("当社に関して何か質問はありますか？。 完了後は　以上　と記入");
 				completion = scanner.next();
 				break;
 			}
