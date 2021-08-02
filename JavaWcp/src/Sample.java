@@ -8,6 +8,16 @@ import java.util.Scanner;
 
 public class Sample {
 	public static void main(String[] args) {
+		
+		char a = 'a';
+		//char b = "b"; ダブルクォーテーションでくくってしまうと、String扱いになってしまい、コンパイルエラーになってしまう。
+		char c = '\u1F1C';//ユニコードを代入
+		char d = 100;// 文字コードを代入
+		
+		System.out.println(a);
+		System.out.println(c);
+		System.out.println(d);//char型には、文字１字やユニコード・文字コードを代入できる。
+		
 		int max = Math.max(6, 57);
 		System.out.println("最大値は" + max + "です");
 
