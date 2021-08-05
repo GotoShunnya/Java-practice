@@ -15,11 +15,16 @@ public class SPI {
 		Calculate calculate = new Calculate();
 		Average average = new Average();
 		
+		System.out.print("SPIプログラムの使用者の名前を教えてください。");
+		Scanner name = new Scanner(System.in);
+		String whoAreYou = name.next();
+		hello(whoAreYou);
+
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("選んでください　約数、　完全数、　四則演算　平均");
 		String calculator = scanner.next();
 		boolean oneMore = true;
-
+		
 		do {
 			switch (calculator) {
 
@@ -57,7 +62,18 @@ public class SPI {
 				calculator = scanner.next();
 			}
 		} while (oneMore);
+		
+		bye(whoAreYou);
+		name.close();
 
+	}
+	
+	public static void hello(String name) {
+	    System.out.println("こんにちは！" + name + "さん");
+	}
+	
+	public static void bye(String name) {
+	    System.out.println("さようなら！" + name + "さん");
 	}
 
 }
