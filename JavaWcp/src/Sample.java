@@ -90,5 +90,21 @@ public class Sample {
 			}
 			System.out.println("");
 		}
+		
+		//ラッパークラス練習
+		int int1 = 100;
+		Integer integer1 = new Integer(int1);
+		System.out.println(integer1);
+		
+		String str1 = "2021";
+		int int2 = Integer.parseInt(str1);//parseIntメソッド。ラッパークラスに用意されている。文字列から整数に変換する。
+		System.out.println(int2);
+		//String int3 = int2; 
+		//System.out.println(int3);
+		
+		Integer integer2 = new Integer("2021");
+		double double1 = integer2.doubleValue();//doubleValueメソッド。オブジェクトが持つ値をdouble型で返す。
+		System.out.println(double1);
+		
 	}
 }
