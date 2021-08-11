@@ -8,16 +8,16 @@ import java.util.Scanner;
 
 public class Sample {
 	public static void main(String[] args) {
-		
+
 		char a = 'a';
 		//char b = "b"; ダブルクォーテーションでくくってしまうと、String扱いになってしまい、コンパイルエラーになってしまう。
 		char c = '\u1F1C';//ユニコードを代入
 		char d = 100;// 文字コードを代入
-		
+
 		System.out.println(a);
 		System.out.println(c);
 		System.out.println(d);//char型には、文字１字やユニコード・文字コードを代入できる。
-		
+
 		int max = Math.max(6, 57);
 		System.out.println("最大値は" + max + "です");
 
@@ -61,7 +61,7 @@ public class Sample {
 			System.out.println("負けたわ。最強");
 			break;
 		}
-		
+
 		ArrayList<String> stateList = new ArrayList<String>();
 		stateList.add("TX");//addで項目を追加/
 		stateList.add("WA");
@@ -77,34 +77,54 @@ public class Sample {
 		for (int i = 0; i < stateList.size(); i++) {
 			System.out.println(stateList.get(i));
 		}
-		
-		for(int i = 10; i >= 1; i--) {//for分のネスト練習/
-			for(int j = 1; j <= 10; j++) {
-				if( i % 2 == 0 ) {
-				}
-				else if(j % 2 == 0) {
-				}
-				else {//奇数だけ表示/
+
+		for (int i = 10; i >= 1; i--) {//for分のネスト練習/
+			for (int j = 1; j <= 10; j++) {
+				if (i % 2 == 0) {
+				} else if (j % 2 == 0) {
+				} else {//奇数だけ表示/
 					System.out.println("(" + i + "," + j + ")");
 				}
 			}
 			System.out.println("");
 		}
-		
+
 		//ラッパークラス練習
 		int int1 = 100;
 		Integer integer1 = new Integer(int1);
 		System.out.println(integer1);
-		
+
 		String str1 = "2021";
 		int int2 = Integer.parseInt(str1);//parseIntメソッド。ラッパークラスに用意されている。文字列から整数に変換する。
 		System.out.println(int2);
 		//String int3 = int2; 
 		//System.out.println(int3);
-		
+
 		Integer integer2 = new Integer("2021");
 		double double1 = integer2.doubleValue();//doubleValueメソッド。オブジェクトが持つ値をdouble型で返す。
 		System.out.println(double1);
+
+//		double double2 = 1.5; 
+//		switch (double2) {switch文でdouble・floatの値は返せない。
+
+//		case 1.5:
+//			System.out.println('A');
+			
+//		case 2.0:
+//			System.out.println('B');
+//		}
 		
+		if(false)//｛｝を省略すると次の一文がifの処理がかけられ、その後ifブロックを抜ける。よってBとCのみがコンソールに出力される。
+			System.out.println('A');
+		System.out.print('B');
+		System.out.println('C');
+		
+		int value1 = 0;
+		int value2 = 0;
+		if(++value1 > 0 || ++value2 > 0) {//論理和(||)では、左オペラントの結果がtrueの場合は右オペランドは評価されない。今回の場合は右オペランドはインクリメントされない。
+			System.out.print("value1= " + value1 + ", ");
+			System.out.println("value2= " + value2);
+		}
+
 	}
 }
