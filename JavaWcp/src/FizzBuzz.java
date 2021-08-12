@@ -1,26 +1,24 @@
-import java.util.Random;
+import java.util.Scanner;
 
-public class FizzBuzz {
+public class FizzBuzz{
 	public static void main(String[] args) {
-		int i = 0;
-		int counter = 100;
-		int numfizz = 3;
-		int numbuzz = 5;
-		String strfizz = "Fizz";
-		String strbuzz = "Buzz";
-
-		for (i = 1; i <= counter; i++) {
-			Random rand = new Random();
-			int randnum = rand.nextInt(100) + 1;//変数randnumも100回繰り返す。/
-			if (randnum % (numfizz * numbuzz) == 0) {
-				System.out.println(strfizz + strbuzz);
-			} else if (randnum % numfizz == 0) {
-				System.out.println(strfizz);
-			} else if (randnum % numbuzz == 0) {
-				System.out.println(strbuzz);
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("整数を記入してください。");
+		int num = scanner.nextInt();
+		
+		
+		for(int i = 1; i <= num; i++) {
+			if(i % 3 == 0 && i % 5 == 0) {
+				System.out.println("FizzBuzz!");
+			} else if(i % 5 == 0) {
+				System.out.println("Buzz");
+			} else if (i % 3 == 0) {
+				System.out.println("Fizz");
 			} else {
-				System.out.println(randnum);
+				System.out.println(i);
 			}
 		}
+		scanner.close();
+		System.out.println("終了");
 	}
 }
