@@ -21,7 +21,7 @@ public class SPI {
 		hello(whoAreYou);
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("選んでください　約数、　完全数、　四則演算　平均");
+		System.out.println("選んでください　約数、　完全数、　四則演算、　平均");
 		String calculator = scanner.next();
 		boolean oneMore = true;
 		
