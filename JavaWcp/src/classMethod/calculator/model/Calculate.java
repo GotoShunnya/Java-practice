@@ -91,22 +91,22 @@ public class Calculate {
 		
 	}
 
-	public double addNumber(int number) {
+	private double addNumber(int number) {
 			this.num += number;
 			return this.num;
 	}
 
-	public double minusNumber(int number) {
+	private double minusNumber(int number) {
 			this.num -= number;
 			return this.num;
 	}
 
-	public double timsNumber(int number) {
+	private double timsNumber(int number) {
 			this.num *= number;
 			return this.num;
 	}
 
-	public double divisionNumber(int number) {
+	private double divisionNumber(int number) {
 		this.num /= number;
 			return this.num;
 	}

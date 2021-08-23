@@ -41,7 +41,7 @@ public class SPI {
 				break;
 				
 			case "平均":
-				average .average();
+				average .getAverage();
 				break;
 			}
 			
