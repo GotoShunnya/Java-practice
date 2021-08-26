@@ -6,6 +6,7 @@ import classMethod.calculator.model.Average;
 import classMethod.calculator.model.Calculate;
 import classMethod.calculator.model.Divisor;
 import classMethod.calculator.model.PerfectNumber;
+import interviewMeasures.java.InterviewMeasures;
 
 public class SPI {
 	public static void main(String[] args) {
@@ -14,6 +15,7 @@ public class SPI {
 		PerfectNumber perfectNumber = new PerfectNumber();
 		Calculate calculate = new Calculate();
 		Average average = new Average();
+		InterviewMeasures interview = new InterviewMeasures();
 		
 		System.out.print("SPIプログラムの使用者の名前を教えてください。");
 		Scanner name = new Scanner(System.in);
@@ -21,7 +23,7 @@ public class SPI {
 		hello(whoAreYou);
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("選んでください　約数、　完全数、　四則演算、　平均");
+		System.out.println("選んでください　約数、　完全数、　四則演算、　平均、　面接練習");
 		String calculator = scanner.next();
 		boolean oneMore = true;
 		
@@ -41,7 +43,11 @@ public class SPI {
 				break;
 				
 			case "平均":
-				average .getAverage();
+				average.getAverage();
+				break;
+				
+			case "面接練習":
+				interview.interview();
 				break;
 			}
 			
@@ -57,7 +63,11 @@ public class SPI {
 			} else if (calculator.equals("平均")) {
 				scanner.close();
 				oneMore = false;
-			} else {
+			} else if (calculator.equals("面接練習")) {
+				scanner.close();
+				oneMore = false;
+			}
+			else {
 				System.out.print("入力したワードは見つかりませんでした。もう一度選んでください。");
 				calculator = scanner.next();
 			}

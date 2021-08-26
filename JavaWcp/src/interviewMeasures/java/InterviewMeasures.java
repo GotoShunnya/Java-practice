@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class InterviewMeasures {
 
-	public static void main(String[] args) {
+	public void interview(){
 
 		System.out.println("面接練習を始めます。");
 		Scanner scanner = new Scanner(System.in);
